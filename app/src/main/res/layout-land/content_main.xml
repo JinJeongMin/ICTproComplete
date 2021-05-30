@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555659"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:background="#ca1a36"
+        android:layout_width="400px"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f1button"
+                android:layout_width="123dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/buttontaped"
+                android:text="1F"
+                android:textSize="30sp"
+                android:textColor="#FFFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f2button"
+                android:layout_width="123dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/buttonuntaped"
+                android:text="2F"
+                android:textColor="#FFFFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/f1button" />
+
+            <TextView
+                android:id="@+id/testBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/f1image"
+                app:layout_constraintTop_toTopOf="@+id/f1image" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:background="#ca1a36"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/drinks_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/drinks" />
+
+            <ImageView
+                android:id="@+id/drinks_brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/drinks_brown"
+                />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <fragment
+            android:id="@+id/container"
+            android:name="com.example.myapplicationk.FirstFloor"
+            android:layout_width="1000px"
+            android:layout_height="1000px"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>
